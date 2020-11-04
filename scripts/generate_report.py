@@ -245,19 +245,20 @@ test = 'bn128_mul-chfast2'
 test = 'blake2b-8415-bytes'
 test = 'sha1-42488-bits'
 filters = [
-	{'virtualisation_type':'wasm','engine':'wagon',   'prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'wabt',    'prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'v8-liftoff',   'prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'v8-turbofan',   'prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'v8-interpreter','prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'wasmtime','prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'wavm','prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'life','prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'wasmi','prefix':'','column':'exec_time'},
-	{'virtualisation_type':'wasm','engine':'wamr-interp','prefix':'','column':'exec_time'},
 	{'virtualisation_type':'wasm','engine':'wamr-jit','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'v8-turbofan',   'prefix':'','column':'exec_time'},
 	{'virtualisation_type':'wasm','engine':'wamr-aot','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'v8-liftoff',   'prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'wasmtime','prefix':'','column':'exec_time'},
 	{'virtualisation_type':'wasm','engine':'wasm3','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'wavm','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'wamr-interp','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'life','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'wabt',    'prefix':'','column':'exec_time'},
+
+	{'virtualisation_type':'wasm','engine':'wagon',   'prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'v8-interpreter','prefix':'','column':'exec_time'},
+	{'virtualisation_type':'wasm','engine':'wasmi','prefix':'','column':'exec_time'},
 #     {'virtualisation_type':'wasm','engine':'life-polymerase','prefix':'','column':'exec_time'},
 ]
 customtest_f, customtest = calc_customtest_by_test_and_filter(test, filters)
